@@ -7,26 +7,41 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Tahir's Portfolio - Web Developer & Designer">
+    <meta name="description" content="Tahir's Portfolio - Web Developer & Designer specializing in modern, responsive websites and applications. View my projects and get in touch for collaboration opportunities.">
+    <meta name="keywords" content="web developer, web designer, portfolio, HTML, CSS, JavaScript, React, Node.js, responsive design">
+    <meta name="author" content="Tahir">
     <meta name="theme-color" content="#1e88e5">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tahir's Portfolio - Web Developer & Designer">
+    <meta property="og:description" content="Web Developer & Designer specializing in modern, responsive websites and applications">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tahirtaim.me">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/192377370?v=4">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tahir's Portfolio - Web Developer & Designer">
+    <meta name="twitter:description" content="Web Developer & Designer specializing in modern, responsive websites and applications">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/192377370?v=4">
 </head>
 <body>
     <div class="loader-wrapper">
         <div class="loader"></div>
     </div>
 
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <div class="logo">
             <span class="highlight">T</span>ahir
         </div>
-        <div class="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+        <div class="nav-links" role="menu">
+            <a href="#home" class="active" aria-label="Navigate to home section" role="menuitem">Home</a>
+            <a href="#about" aria-label="Navigate to about section" role="menuitem">About</a>
+            <a href="#projects" aria-label="Navigate to projects section" role="menuitem">Projects</a>
+            <a href="#skills" aria-label="Navigate to skills section" role="menuitem">Skills</a>
+            <a href="#contact" aria-label="Navigate to contact section" role="menuitem">Contact</a>
         </div>
-        <div class="menu-toggle">
+        <div class="menu-toggle" aria-label="Open mobile menu" aria-expanded="false" role="button" tabindex="0">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
@@ -44,7 +59,7 @@
         <div class="hero-image animate-in">
             <div class="shape-blob"></div>
             <div class="shape-circle"></div>
-            <img src="https://avatars.githubusercontent.com/u/192377370?v=4" alt="Profile Image" class="profile-img">
+            <img src="https://avatars.githubusercontent.com/u/192377370?v=4" alt="Profile Image" class="profile-img" loading="lazy">
         </div>
     </section>
 
@@ -55,7 +70,7 @@
         </div>
         <div class="about-content">
             <div class="about-image fade-in">
-                <img src="https://picsum.photos/600/800" alt="About Me">
+                <img src="https://picsum.photos/600/800" alt="About Me" loading="lazy">
             </div>
             <div class="about-text slide-in-right">
                 <h3>Who I Am</h3>
@@ -67,7 +82,7 @@
                 <h3>My Philosophy</h3>
                 <p>I believe in creating websites that are not only visually appealing but also functional, accessible, and user-friendly. Every project I undertake is approached with attention to detail and a commitment to excellence.</p>
                 
-                <div class="about-stats">
+                <div class="about-stats fade-in">
                     <div class="stat">
                         <span class="number count-up" data-target="5">0</span>
                         <span class="stat-text">Years Experience</span>
@@ -92,16 +107,16 @@
             <h2>My <span class="highlight">Projects</span></h2>
             <div class="underline"></div>
         </div>
-        <div class="project-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="design">Design</button>
-            <button class="filter-btn" data-filter="app">Applications</button>
+        <div class="project-filters" role="group" aria-label="Project category filters">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="web" aria-pressed="false">Web Development</button>
+            <button class="filter-btn" data-filter="design" aria-pressed="false">Design</button>
+            <button class="filter-btn" data-filter="app" aria-pressed="false">Applications</button>
         </div>
         <div class="projects-grid">
             <div class="project-card" data-category="web">
                 <div class="project-img">
-                    <img src="https://picsum.photos/id/1/600/400" alt="Project 1">
+                    <img src="https://picsum.photos/id/1/600/400" alt="Project 1" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>E-commerce Website</h3>
@@ -119,7 +134,7 @@
             </div>
             <div class="project-card" data-category="design">
                 <div class="project-img">
-                    <img src="https://picsum.photos/id/2/600/400" alt="Project 2">
+                    <img src="https://picsum.photos/id/2/600/400" alt="Project 2" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>Brand Redesign</h3>
@@ -137,7 +152,7 @@
             </div>
             <div class="project-card" data-category="app">
                 <div class="project-img">
-                    <img src="https://picsum.photos/id/3/600/400" alt="Project 3">
+                    <img src="https://picsum.photos/id/3/600/400" alt="Project 3" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>Task Manager App</h3>
@@ -155,7 +170,7 @@
             </div>
             <div class="project-card" data-category="web">
                 <div class="project-img">
-                    <img src="https://picsum.photos/id/4/600/400" alt="Project 4">
+                    <img src="https://picsum.photos/id/4/600/400" alt="Project 4" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>Personal Blog</h3>
@@ -285,10 +300,10 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/tahirtaim"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://x.com/tahirtaim"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com/tahirtaim"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/tahirtaim" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/tahirtaim" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/tahirtaim" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/tahirtaim" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <!-- <div class="contact-form slide-in-right">
@@ -325,10 +340,10 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/tahirtaim"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="x.com/tahirtaim"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/tahirtaim"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/tahirtaim" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/tahirtaim" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/tahirtaim" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/tahirtaim" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="footer-bottom">

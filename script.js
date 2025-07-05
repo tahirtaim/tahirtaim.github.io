@@ -49,12 +49,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Mobile menu toggle with animation
-    menuToggle.addEventListener('click', function() {
+    // Mobile menu toggle with animation and keyboard support
+    const toggleMenu = () => {
         navLinks.classList.toggle('show');
-        const icon = this.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+        const icon = menuToggle.querySelector('i');
+        const isOpen = navLinks.classList.contains('show');
+        
+        icon.classList.toggle('fa-bars', !isOpen);
+        icon.classList.toggle('fa-times', isOpen);
+        
+        // Update ARIA attributes
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close mobile menu' : 'Open mobile menu');
+    };
+    
+    menuToggle.addEventListener('click', toggleMenu);
+    
+    // Add keyboard support for menu toggle
+    menuToggle.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
     });
 
     // Close mobile menu when a link is clicked
@@ -132,10 +148,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterBtns.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
+            // Remove active class and update aria-pressed for all buttons
+            filterBtns.forEach(button => {
+                button.classList.remove('active');
+                button.setAttribute('aria-pressed', 'false');
+            });
+            
+            // Add active class and update aria-pressed for clicked button
             this.classList.add('active');
+            this.setAttribute('aria-pressed', 'true');
             
             const filter = this.getAttribute('data-filter');
             
@@ -182,17 +203,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const counters = document.querySelectorAll('.count-up');
     
     function animateCounters() {
-        counters.forEach(counter => {
+        counters.forEach((counter, index) => {
             const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const increment = target / 100;
+            const duration = 2000; // 2 seconds
+            const startTime = Date.now();
             
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(animateCounters, 50);
-            } else {
-                counter.innerText = target;
-            }
+            const updateCounter = () => {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const currentValue = Math.floor(progress * target);
+                
+                counter.innerText = currentValue;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            // Add a slight delay for each counter for staggered effect
+            setTimeout(() => {
+                updateCounter();
+            }, index * 100);
         });
     }
 
@@ -211,7 +244,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Since GitHub Pages doesn't process server-side code, 
             // for a real implementation, you'd want to use a form service
             // like FormSpree, Netlify Forms, or a custom backend
-            console.log({name, email, subject, message});
+            
+            // For now, we'll simulate a successful form submission
+            // In a real implementation, you would send the data to your backend
             
             // Show success message
             const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -226,8 +261,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
                 
-                // Show a success message
-                alert('Thank you for your message! I will get back to you soon.');
+                // Show a success message with better UX
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you for your message! I will get back to you soon.';
+                successMessage.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #4caf50;
+                    color: white;
+                    padding: 1rem 1.5rem;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    z-index: 10000;
+                    animation: slideInRight 0.3s ease;
+                `;
+                document.body.appendChild(successMessage);
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
             }, 2000);
         });
     }
