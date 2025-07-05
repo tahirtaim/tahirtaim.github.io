@@ -23,8 +23,6 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
         </div>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -33,18 +31,39 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
+            <div class="hero-image animate-in">
+                <img src="https://avatars.githubusercontent.com/u/192377370?v=4" alt="Tahir's Profile" class="profile-img">
+            </div>
             <h1 class="animate-text">Hi, I'm <span class="highlight">Tahir</span></h1>
             <h2 class="animate-text delay-1">Web Developer & Designer</h2>
             <p class="animate-text delay-2">I create beautiful, functional websites and applications</p>
+            
+            <div class="contact-quick">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>tahirtaim654@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+8801841626387</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dhaka, Bangladesh</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/tahirtaim" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/tahirtaim" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/tahirtaim" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary-btn animate-text delay-3">View My Work</a>
-                <a href="#contact" class="btn secondary-btn animate-text delay-3">Contact Me</a>
+                <a href="#about" class="btn secondary-btn animate-text delay-3">Learn More</a>
             </div>
-        </div>
-        <div class="hero-image animate-in">
-            <div class="shape-blob"></div>
-            <div class="shape-circle"></div>
-            <img src="https://avatars.githubusercontent.com/u/192377370?v=4" alt="Profile Image" class="profile-img">
         </div>
     </section>
 
@@ -54,18 +73,21 @@
             <div class="underline"></div>
         </div>
         <div class="about-content">
-            <div class="about-image fade-in">
-                <img src="https://picsum.photos/600/800" alt="About Me">
-            </div>
-            <div class="about-text slide-in-right">
+            <div class="about-text">
                 <h3>Who I Am</h3>
                 <p>Hello! I'm Tahir, a passionate web developer with a keen eye for design and a love for creating engaging user experiences. I specialize in building modern, responsive websites and applications using cutting-edge technologies.</p>
                 
-                <h3>My Journey</h3>
-                <p>My journey in web development began several years ago when I first discovered the power of creating something from scratch that others could interact with online. Since then, I've been constantly learning and improving my skills to stay at the forefront of web technologies.</p>
-                
-                <h3>My Philosophy</h3>
-                <p>I believe in creating websites that are not only visually appealing but also functional, accessible, and user-friendly. Every project I undertake is approached with attention to detail and a commitment to excellence.</p>
+                <h3>My Skills & Expertise</h3>
+                <div class="skills-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>UI/UX Design</span>
+                    <span>Responsive Design</span>
+                </div>
                 
                 <div class="about-stats">
                     <div class="stat">
@@ -81,8 +103,6 @@
                         <span class="stat-text">Happy Clients</span>
                     </div>
                 </div>
-                
-                <a href="#" class="btn primary-btn" download="Tahir_CV.pdf"><i class="fas fa-download mr-2"></i> Download CV</a>
             </div>
         </div>
     </section>
@@ -92,56 +112,14 @@
             <h2>My <span class="highlight">Projects</span></h2>
             <div class="underline"></div>
         </div>
-        <div class="project-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="design">Design</button>
-            <button class="filter-btn" data-filter="app">Applications</button>
-        </div>
         <div class="projects-grid">
-            <div class="project-card" data-category="web">
+            <div class="project-card">
                 <div class="project-img">
-                    <img src="https://picsum.photos/id/1/600/400" alt="Project 1">
+                    <img src="https://picsum.photos/id/1/600/400" alt="E-commerce Website">
                 </div>
                 <div class="project-info">
-                    <h3>E-commerce Website</h3>
-                    <p>A fully responsive e-commerce platform with shopping cart functionality.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn small-btn">View Live</a>
-                        <a href="#" class="btn small-btn secondary-btn">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="design">
-                <div class="project-img">
-                    <img src="https://picsum.photos/id/2/600/400" alt="Project 2">
-                </div>
-                <div class="project-info">
-                    <h3>Brand Redesign</h3>
-                    <p>Complete brand identity redesign for a local business.</p>
-                    <div class="project-tags">
-                        <span>Figma</span>
-                        <span>Photoshop</span>
-                        <span>Illustrator</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn small-btn">Case Study</a>
-                        <a href="#" class="btn small-btn secondary-btn">Behance</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="app">
-                <div class="project-img">
-                    <img src="https://picsum.photos/id/3/600/400" alt="Project 3">
-                </div>
-                <div class="project-info">
-                    <h3>Task Manager App</h3>
-                    <p>A productivity application to manage daily tasks and schedules.</p>
+                    <h3>E-commerce Platform</h3>
+                    <p>A fully responsive e-commerce platform with modern UI and shopping cart functionality.</p>
                     <div class="project-tags">
                         <span>React</span>
                         <span>Node.js</span>
@@ -149,168 +127,50 @@
                     </div>
                     <div class="project-links">
                         <a href="#" class="btn small-btn">View Live</a>
-                        <a href="#" class="btn small-btn secondary-btn">GitHub</a>
+                        <a href="https://github.com/tahirtaim" class="btn small-btn secondary-btn">GitHub</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card" data-category="web">
+            <div class="project-card">
                 <div class="project-img">
-                    <img src="https://picsum.photos/id/4/600/400" alt="Project 4">
+                    <img src="https://picsum.photos/id/3/600/400" alt="Task Manager App">
                 </div>
                 <div class="project-info">
-                    <h3>Personal Blog</h3>
-                    <p>A minimalist blog designed for optimal reading experience.</p>
+                    <h3>Task Manager App</h3>
+                    <p>A productivity application to manage daily tasks with intuitive design and real-time updates.</p>
                     <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>WordPress</span>
+                        <span>JavaScript</span>
+                        <span>CSS3</span>
+                        <span>HTML5</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="btn small-btn">View Live</a>
-                        <a href="#" class="btn small-btn secondary-btn">GitHub</a>
+                        <a href="https://github.com/tahirtaim" class="btn small-btn secondary-btn">GitHub</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="projects-cta">
-            <a href="#" class="btn primary-btn">View All Projects</a>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="section-header">
-            <h2>My <span class="highlight">Skills</span></h2>
-            <div class="underline"></div>
-        </div>
-        <div class="skills-content">
-            <div class="skills-text slide-in-left">
-                <h3>What I Bring to the Table</h3>
-                <p>I have a diverse set of skills ranging from design to front-end and back-end development. I'm constantly learning and adding new technologies to my toolkit to ensure I can bring the best solutions to every project.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML5</h3>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-width="95"></div>
-                    </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://picsum.photos/id/4/600/400" alt="Portfolio Website">
                 </div>
-                <div class="skill-card fade-in delay-1">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>A modern, responsive portfolio website showcasing clean design and smooth animations.</p>
+                    <div class="project-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
                     </div>
-                    <h3>CSS3</h3>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-width="90"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-in delay-2">
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-in delay-3">
-                    <div class="skill-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3>React</h3>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-width="80"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-in delay-4">
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3>Node.js</h3>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-width="75"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-in delay-5">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>MongoDB</h3>
-                    <div class="skill-progress">
-                        <div class="progress-bar" data-width="70"></div>
+                    <div class="project-links">
+                        <a href="#" class="btn small-btn">View Live</a>
+                        <a href="https://github.com/tahirtaim" class="btn small-btn secondary-btn">GitHub</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="section-header">
-            <h2>Get In <span class="highlight">Touch</span></h2>
-            <div class="underline"></div>
-        </div>
-        <div class="contact-content">
-            <div class="contact-info slide-in-left">
-                <h3>Contact Information</h3>
-                <p>Feel free to reach out to me for any inquiries or project discussions. I'm always open to new opportunities and collaborations.</p>
-                <div class="contact-items">
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="text">
-                            <h4>Email</h4>
-                            <p>tahirtaim654@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="text">
-                            <h4>Phone</h4>
-                            <p>+8801841626387</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="text">
-                            <h4>Location</h4>
-                            <p>Dhaka, Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/tahirtaim"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://x.com/tahirtaim"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com/tahirtaim"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- <div class="contact-form slide-in-right">
-                <h3>Send Me a Message</h3>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">Send Message</button>
-                </form>
-            </div> -->
-        </div>
-    </section>
+
 
     <footer>
         <div class="footer-content">
@@ -321,8 +181,6 @@
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
             </div>
             <div class="social-links">
                 <a href="https://github.com/tahirtaim"><i class="fab fa-github"></i></a>
